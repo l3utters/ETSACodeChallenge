@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "Update User";
+}
+
+<!DOCTYPE html>
+<html>
+<h2>Update an existing users status</h2>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    @using (Html.BeginForm("UpdateUser", "Home", FormMethod.Post))
+    {
+    <div>
+        <td>UserName: </td>
+        <td>
+            <input type="text" id="Username" name="Username"><br><br>
+        </td>
+    </div>
+    <div>
+        <td>Status: </td>
+        <select name="Status" id="status">
+            <option value=1>Active</option>
+            <option value=2>Awaiting Approval</option>
+            <option value=3>Inactive</option>
+            <option value=4>Suspended</option>
+        </select>
+        <td></td>
+        <td><input type="submit" value="Submit" /></td>
+    </div>
+        
+    }
+</body>
+</html>

@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "Delete User";
+
+}
+
+<!DOCTYPE html>
+
+<html>
+<h2>Delete a user from the system</h2>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    @using (Html.BeginForm("DeleteUser", "Home", FormMethod.Post))
+    {
+        <table cellpadding="10" cellspacing="10">
+            <tr>
+                <th colspan="3" align="center"></th>
+            </tr>
+            <tr>
+                <td>UserName: </td>
+                <td>
+                    <input type="text" id="Username" name="Username"><br><br>
+                </td>
+            </tr>
+            <tr>
+                <td>Please Type DELETE to confirm</td>
+                <td>
+                    <input type="text" id="confirmation" name="Confirmation"><br><br>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Submit" /></td>
+            </tr>
+        </table>
+    }
+</body>
+</html>

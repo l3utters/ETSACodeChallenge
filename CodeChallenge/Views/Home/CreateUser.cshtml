@@ -1,0 +1,41 @@
+﻿@model CodeChallenge.Models.CreateUser
+
+@{
+    ViewBag.Title = "Create User";
+}
+
+<!DOCTYPE html>
+
+<html>
+<h2>Create a new User and add to the system</h2>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    @using (Html.BeginForm("CreateUser", "Home", FormMethod.Post))
+    {
+        <table cellpadding="0" cellspacing="0">
+            <tr>
+                <th colspan="2" align="center"></th>
+            </tr>
+            <tr>
+                <td>UserName: </td>
+                <td>
+                    @Html.TextBoxFor(m => m.Username)
+                </td>
+            </tr>
+            <tr>
+                <td>Password: </td>
+                <td>
+                    @Html.TextBoxFor(m => m.Password)
+                </td>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Submit" /></td>
+            </tr>
+        </table>
+    }
+</body>
+</html>
+
